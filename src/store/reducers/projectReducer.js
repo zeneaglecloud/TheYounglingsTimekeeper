@@ -14,6 +14,12 @@ const projectReducer = (state = initState, action) => {
         case 'CREATE_PROJECT_ERROR':
             console.log('create project error', action.err);
             return state;
+        case 'ADD_SICKLEAVE':
+            console.log('added sick leave', action.project);
+            return state;
+        case 'ADD_SICKLEAVE_ERROR':
+            console.log('added sick leave error', action.err);
+            return state;
         default: 
             return state;
     }
