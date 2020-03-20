@@ -16,22 +16,3 @@ export const createProject = (project) => {
         
     }
 };
-
-export const addSickLeave = (project) => {
-    return (dispatch, getState, { getFirebase, getFirestore }) => {
-        // make async call to database
-        const firestore = getFirestore();
-        firestore.collection('Leave/sickLeave/test').add({
-            ...project,
-            authorFirstName: 'Sizwe',
-            authorLastName: 'Hugo',
-            authorId: 420,
-            createdAt: new Date()
-        }).then(() => {
-            dispatch({ type: 'ADD_SICKLEAVE', project: project });
-        }).catch((err) => {
-            dispatch({ type: 'ADD_SICKLEAVE_ERROR', err });
-        })
-        
-    }
-};

@@ -7,7 +7,6 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import ProjectDetails from './components/projectdata/ProjectDetails';
 import CreateProject from './components/projectdata/CreateProject';
-import SickLeave from './components/projectdata/SickLeave';
 
 class App extends Component {
   render () {
@@ -21,7 +20,6 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/project/:id' component={ProjectDetails} />
             <Route path='/create' component={CreateProject} />
-            <Route path='/sick' component={SickLeave} />
           </Switch>
         </div>
       </BrowserRouter>
