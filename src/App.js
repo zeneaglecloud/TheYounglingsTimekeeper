@@ -7,6 +7,7 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import ProjectDetails from './components/projectdata/ProjectDetails';
 import CreateProject from './components/projectdata/CreateProject';
+import TimeSheet from './components/TimeSheet/Clock';
 
 class App extends Component {
   render () {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/project/:id' component={ProjectDetails} />
             <Route path='/create' component={CreateProject} />
+            <Route path='/timesheet' component={TimeSheet} />
           </Switch>
         </div>
       </BrowserRouter>
